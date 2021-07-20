@@ -149,7 +149,11 @@ class AllProductsSection extends Component {
   }
 
   changeTitleSearch = value => {
-    this.setState({titleSearch: value}, this.getProducts)
+    this.setState({titleSearch: value})
+  }
+
+  onSearchGetProducts = () => {
+    this.getProducts()
   }
 
   changeCategoryOption = value => {
@@ -268,6 +272,7 @@ class AllProductsSection extends Component {
           updateRatingOption={this.changeRatingOption}
           clearFilters={this.onClickClearFilters}
           titleSearchValue={titleSearch}
+          triggerSearch={this.onSearchGetProducts}
         />
 
         {this.checkStatusAndRenderProcess()}

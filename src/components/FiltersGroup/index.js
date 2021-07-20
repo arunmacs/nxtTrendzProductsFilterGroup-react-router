@@ -2,7 +2,12 @@ import {BsSearch} from 'react-icons/bs'
 import './index.css'
 
 const FiltersGroup = props => {
-  const {updateSearchKeyword, titleSearchValue, clearFilters} = props
+  const {
+    updateSearchKeyword,
+    titleSearchValue,
+    clearFilters,
+    triggerSearch,
+  } = props
 
   const onChangeTitleSearch = event => {
     updateSearchKeyword(event.target.value)
@@ -10,6 +15,12 @@ const FiltersGroup = props => {
 
   const onChangeFilters = () => {
     clearFilters()
+  }
+
+  const submitSearchKeyword = event => {
+    if (event.key === 'Enter') {
+      triggerSearch()
+    }
   }
 
   const renderCategoryList = () => {
@@ -63,6 +74,7 @@ const FiltersGroup = props => {
           onChange={onChangeTitleSearch}
           className="input"
           placeholder="Search"
+          onKeyDown={submitSearchKeyword}
         />
         <BsSearch className="search-icon" />
       </div>
