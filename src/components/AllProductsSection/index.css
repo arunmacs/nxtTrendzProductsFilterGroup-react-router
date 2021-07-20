@@ -1,0 +1,130 @@
+.all-products-section {
+  display: flex;
+  flex-direction: column;
+}
+
+@media screen and (min-width: 768px) {
+  .all-products-section {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .all-products-container {
+    margin-left: 30px;
+    width: 70%;
+  }
+}
+
+.products-heading {
+  color: #475569;
+  font-family: 'Roboto';
+  font-size: 20px;
+  font-weight: 500;
+}
+
+@media screen and (min-width: 768px) {
+  .products-heading {
+    font-size: 32px;
+  }
+}
+
+.products-loader-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.no-products-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 40px 5px 40px 5px;
+}
+
+.no-products {
+  width: 80%;
+}
+
+.no-product-text {
+  color: #0f172a;
+  font-size: 30px;
+  font-weight: bold;
+  margin: 13px 5px 13px 5px;
+}
+
+.no-product-info {
+  color: #475569;
+  font-size: 21px;
+  font-weight: 400;
+  margin: 13px 5px 13px 5px;
+  text-align: center;
+}
+
+@media screen and (min-width: 768px) {
+  .no-products-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 30px;
+    width: 70%;
+  }
+  .no-products {
+    width: 70%;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .products-loader-container {
+    width: 70%;
+  }
+}
+
+.products-list {
+  display: flex;
+  flex-wrap: wrap;
+  padding-left: 0;
+}
+
+.failure-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 40px 5px 40px 5px;
+}
+
+.products-failure {
+  width: 80%;
+}
+
+.products-failure-text {
+  color: #0f172a;
+  font-size: 26px;
+  font-weight: bold;
+  margin: 13px 5px 13px 5px;
+}
+
+.products-failure-info {
+  color: #475569;
+  font-size: 20px;
+  font-weight: 400;
+  margin: 13px 5px 13px 5px;
+  text-align: center;
+}
+
+@media screen and (min-width: 768px) {
+  .failure-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 30px;
+    width: 70%;
+  }
+  .products-failure {
+    width: 70%;
+  }
+}
