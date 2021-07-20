@@ -31,10 +31,29 @@
 }
 
 .search-icon {
-  height: 45px;
-  width: 45px;
+  height: 40px;
+  width: 40px;
   color: #475569;
-  padding: 6px 11px 6px 11px;
+  padding: 6px 9px 6px 9px;
+}
+
+@media screen and (min-width: 768px) {
+  .search-container {
+    justify-content: space-between;
+  }
+
+  .input {
+    font-size: 16px;
+    width: 190px;
+    padding: 8px 3px 8px 15px;
+  }
+
+  .search-icon {
+    height: 30px;
+    width: 30px;
+    color: #475569;
+    padding: 6px 6px 6px 3px;
+  }
 }
 
 .category-container {

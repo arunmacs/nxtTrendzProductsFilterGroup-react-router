@@ -20,13 +20,13 @@ const FiltersGroup = props => {
         updateCategoryOption(option.categoryId)
 
       return (
-        <li
+        <p
           key={option.categoryId}
           onClick={onClickCategoryOption}
           className="category-item"
         >
           {option.name}
-        </li>
+        </p>
       )
     })
   }
@@ -43,7 +43,11 @@ const FiltersGroup = props => {
           onClick={onClickRatingOption}
           className="rating-item"
         >
-          <img src={rating.imageUrl} alt="rating" className="rating-img" />
+          <img
+            src={rating.imageUrl}
+            alt={`rating-${rating.ratingId}`}
+            className="rating-img"
+          />
           <p className="rating-and-up-text"> & up</p>
         </li>
       )
@@ -54,7 +58,7 @@ const FiltersGroup = props => {
     <div className="filters-group-container">
       <div className="search-container">
         <input
-          type="text"
+          type="search"
           value={titleSearchValue}
           onChange={onChangeTitleSearch}
           className="input"
@@ -64,7 +68,7 @@ const FiltersGroup = props => {
       </div>
       <div className="category-container">
         <h1 className="category-text">Category</h1>
-        <ul className="category-list">{renderCategoryList()}</ul>
+        <div className="category-list">{renderCategoryList()}</div>
       </div>
       <div className="ratings-container">
         <h1 className="rating-text">Rating</h1>
